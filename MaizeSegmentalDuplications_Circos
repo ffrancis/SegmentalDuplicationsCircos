@@ -1,0 +1,197 @@
+<colors>
+<<include etc/colors.conf>>
+</colors>
+
+<fonts>
+<<include etc/fonts.conf>>
+</fonts>
+
+
+<<include ideogram.conf>>
+<<include ticks.conf>>
+
+<image>
+<<include etc/image.conf>>
+
+file*	= 10000bp_RegionvsRegions_90pid.png
+radius*	= 2000p
+</image>
+
+chromosomes_units           = 1000000
+chromosomes_display_default = yes
+
+### single genomes
+
+# specify the karyotype file here - try other karyotypes in data/karyotype
+karyotype = Path/karyptype.maize2.txt
+
+
+
+
+### links###########################
+<links>
+
+z             = 0
+radius        = 0.89r
+bezier_radius = 0.2r
+
+
+
+show          = yes
+color         = lred_a5
+#color         = chr3_a5
+#color	= substr(_CHR2_,rindex(_CHR2_,"m")+1)
+#color         = eval("chr".substr(_CHR2_,rindex(_CHR2_,"m")+1)."_a5" )
+#color	= eval("chr".substr(_CHR2_,rindex(_CHR2_,"m")+1)."_a5" ))
+
+thickness     = 1
+
+
+<link>
+#file          = Path/merged_test.txt
+#file          = Path/merged/SegmentalDup/merged_segmental_dup_global-local_90pid.txt
+file          = Path/merged/10000_bpRegionvsRegions_90pid.txt
+
+
+<rules>
+flow       = continue
+<rule>
+condition  = from(zm1)
+color	= lum70chr1_a5
+z             = 2
+</rule>
+
+<rule>
+condition  = from(zm2)
+color	= chr2_a5
+z             = 25
+</rule>
+
+
+<rule>
+condition  = from(zm3)
+color	= lum70chr3_a5
+z             = 25
+</rule>
+
+<rule>
+condition  = from(zm4)
+color	= lum90chr4_a5
+</rule>
+
+<rule>
+condition  = from(zm5)
+color	= lum90chr5_a5
+z             = 1
+</rule>
+
+
+<rule>
+condition  = from(zm6)
+color	= lum90chr6_a5
+z             = 0
+</rule>
+
+<rule>
+condition  = from(zm7)
+color	= lum80chr8_a5
+z             = 25
+</rule>
+
+<rule>
+condition  = from(zm8)
+color	= lum90chr9_a5
+z             = 1
+</rule>
+
+
+<rule>
+condition  = from(zm9)
+color	= lum90chr7_a5
+z             = 0
+</rule>
+
+<rule>
+condition  = from(zm10)
+color	= lum90chr10_a5
+z             = 1
+</rule>
+
+<rule>
+condition  = from(zm11)
+color	= lum90chr11_a5
+z             = 1
+</rule>
+
+
+<rule>
+condition  = from(zm12)
+color	= lum90chr12_a5
+z             = 1
+</rule>
+
+<rule>
+condition  = from(zm13)
+color	= lum90chr13_a5
+z             = 1
+</rule>
+
+</rules>
+
+</link>
+
+</links>
+
+<highlights>
+
+z          = 15
+fill_color = red
+
+<highlight>
+file       = Path/regions.highlights.txt
+r0         = 0.90r
+r1         = 0.915r 
+stroke_color     = red
+stroke_thickness = 5
+</highlight>
+
+</highlights>
+
+<plots>
+
+type       = text
+color      = black
+label_font = default
+label_size = 18p
+
+#<plot>
+#file = data/6/text.genes.txt
+
+#r1   = 1r+200p
+#r0   = 1r
+
+#show_links     = yes
+#link_dims      = 0p,0p,70p,0p,10p
+#link_thickness = 2p
+#link_color     = red
+
+#</plot>
+
+<plot>
+
+file  = Path/region.names.txt
+r1    = 1r+400p
+r0    = 1r+75p
+z   = 20
+
+show_links     = yes
+link_dims      = 4p,4p,8p,4p,4p
+link_thickness = 2p
+link_color     = grey
+
+</plot>
+
+</plots>
+
+
+<<include etc/housekeeping.conf>>
