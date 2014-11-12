@@ -1,4 +1,6 @@
 SegmentalDuplicationsCircos
-===========================
+================================================
 
-Circos_plot_maize_genomic_Segmental_Duplication.conf
+Output plot
+================================================
+![alt tag](https://github.com/ffrancis/SegmentalDuplicationsCircos/blob/master/SegDup_over1kb95pidallmerged_043014.png)
